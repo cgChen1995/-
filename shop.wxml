@@ -1,0 +1,50 @@
+<view>
+  <my-component count="{{shopCount}}" active="{{selectId}}">
+    <van-tabs active="{{ activeId }}" class="navbar" bind:change="onChange" swipeable>
+        <van-tab wx:for="{{items}}" wx:for-index="idx" wx:for-item="ite" title="{{ite.label}}" 
+        name="{{ite.id}}">
+          <view class="main_content">
+            <scroll-view scroll-y="true" style="height:{{height}}px" bindscrolltolower='lower'>
+              <van-cell-group>
+                <van-grid border="{{false}}" column-num="2">
+                  <van-grid-item wx:for="{{commodyList}}" wx:for-index="index" wx:for-item="item" 
+                  bindtap="gridItem" data-index="{{index}}" use-slot>
+                    <van-image src="{{item.commody_img}}" height="154" width="154" alt />
+                    <view class="cloudshop-flex-box" style="width: 100%;">
+                      <view>{{item.commody_name}}</view>
+                      <view style="font-size: 12px;color: #727272;">{{item.commody_present}}</view>
+                      <view class="cloudshop-Price" style="color: #e40a0a;">
+                        <van-row>
+                          <van-col span="8" style="margin: 5px 0;">
+                            <text style="color: #e40a0a;">￥{{item.commody_money}}</text>
+                          </van-col>
+                          <van-col span="16" style="margin: 5px 0;">
+                            <van-stepper plus-class="stepper-class" minus-class="stepper-class" 
+                            input-class="stepper-input-class" style="text-align: right;" show-minus="{{false}}" 
+                            wx:if="{{item.commody_cnt==0}}" value="{{ item.commody_cnt }}" data-index="{{index}}" 
+                            integer button-size="25px"
+                              catch:plus="plus" catchtap="preventD" />
+                            <van-row wx:else="{{item.commody_cnt>0}}">
+                              <van-stepper plus-class="stepper-class" minus-class="stepper-class" 
+                              style="text-align: right;" value="{{ item.commody_cnt }}" integer button-size="25px"
+                               input-width="25px" catch:plus="plus" catch:minus="minus" data-index="{{index}}" 
+                               catchtap="preventD"
+                                catch:overlimit="overlimit" />
+                            </van-row>
+                          </van-col>
+                        </van-row>
+                      </view>
+                    </view>
+                  </van-grid-item>
+                </van-grid>
+                <view class="buttom-style" style="margin-bottom: 55px;" wx:if="{{commodyList.length==total}}">
+                 {{commodyList.length==0?'~没货啦~':'~我已经见底啦~'}}
+                </view>
+                <view style="height: 70px;" wx:else="{{commodyList.length<total}}"></view>
+              </van-cell-group>
+            </scroll-view>
+          </view>
+        </van-tab>
+      </van-tabs>
+  </my-component>
+</view>

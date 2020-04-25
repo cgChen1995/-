@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "my-component": "/custom-tab-bar/component"
+  },
+  "enablePullDownRefresh": false,
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "",
+  "navigationBarTextStyle": "black"
+}

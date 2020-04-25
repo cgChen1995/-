@@ -1,0 +1,114 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.vanSearch {
+  padding: 0;
+}
+
+.van-Tag {
+  margin: 5px 0 5px 0px;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  line-height: normal;
+  padding: 0.2em 0.5em;
+  padding: var(--tag-padding, 0.2em 0.5em);
+  color: #fff;
+  color: var(--tag-text-color, #fff);
+  font-size: 0.7em;
+  font-size: var(--tag-font-size, 0.7em);
+  border-radius: 0.2em;
+  border-radius: var(--tag-border-radius, 0.2em);
+}
+
+.carousel {
+  width: 100%;
+  background-color: rebeccapurple;
+}
+
+.carousel_swiper {
+  width: 100%;
+  height: 315rpx; /*400rpx*/
+  display: block;
+  position: relative;
+  background: #f4f4f4;
+}
+
+.carouselImg {
+  width: 100%;
+  height: inherit;
+}
+
+.left-title {
+  width: 100px;
+  height: 90px;
+  flex: 0 1 90px !important;
+}
+
+.right-value {
+  width: 100%;
+  overflow: initial;
+}
+
+.main_content {
+  width: 100%;
+  height: 85vh;
+  overflow-y: auto;
+}
+
+.buttom-style {
+  height: 55px;
+  color: #867f86;
+  font-size: 15px;
+  text-align: center;
+  line-height: 3.5rem;
+  background: rgb(249, 249, 249);
+}
+
+.cloudshop-Price {
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.cloudshop-Price text {
+  font-size: 1.2rem;
+  font-weight: 400;
+  float: left;
+}
+
+.cloudshop-Price button {
+  background: #f73d4a;
+  border-radius: 22px;
+  color: #fff;
+  border: none;
+  float: right;
+  font-size: 21px;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  max-width: 22px;
+  padding: 0;
+  line-height: 14px;
+  text-align: center;
+}
+
+.stepper-class{
+  border-radius: 50% !important;
+  background-color: #ec001b !important;
+  color: #fff !important;
+}
+.stepper-input-class{
+  display: none !important;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
